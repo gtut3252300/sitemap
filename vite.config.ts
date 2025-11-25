@@ -20,7 +20,7 @@ export default defineConfig({
       'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
       'Cross-Origin-Embedder-Policy': 'unsafe-none',
     },
-    https: true,
+    // https: true,
     strictPort: true, // 重要！如果 Port 被佔用，直接報錯，不要自動跳到 5174
   },
 })
