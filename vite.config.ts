@@ -1,12 +1,14 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
+import  svgSfc  from  "vite-plugin-svg-sfc" ; 
 import vue from '@vitejs/plugin-vue'
+
 import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), basicSsl()],
+  plugins: [vue(), basicSsl(), svgSfc ( {  mark : "component"  } )],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
